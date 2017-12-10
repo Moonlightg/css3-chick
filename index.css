@@ -13,7 +13,7 @@
 .grass-1{
   position: absolute;
   width: 100%;
-  height: 45%;
+  height: 40%;
   bottom: 0;
   left: 0;
   background-color: #b7f03b;
@@ -225,8 +225,8 @@
 /*山峰*/
 .peak-box{
   position: absolute;
-  top: 10%;
-  height: 45%;
+  top: 5%;
+  height: 50%;
   width: 100%;
 }
 .peak-box>div{position: absolute;}
@@ -341,6 +341,35 @@
   right: 0;
   top: -1rem;
 }
+.peak-9{
+  left: 0;
+  bottom: -2.5rem;
+  right:0;
+  height: 4rem;
+  background-image: -webkit-linear-gradient(0deg, #7acaab, #4f8b74);
+  background-image: linear-gradient(0deg, #7acaab, #4f8b74);
+}
+.peak-9:before{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 4rem;
+  width: 7rem;
+  height: 1rem;
+  border-top-right-radius: 4rem;
+  background: #4f8b74;
+}
+.peak-9:after{
+  position: absolute;
+  content: "";
+  left: 6.9rem;
+  bottom: 3.5rem;
+  width: 5.1rem;
+  height: 1rem;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  background: #73dbc5;
+}
 /*风车塔*/
 .windmill{
   bottom: 5rem;
@@ -425,6 +454,7 @@
   width: 5rem;
   height: 5rem;
   -webkit-animation:rotate 5s linear infinite;
+  z-index: 2;
 }
 .windmill-5>div{ position: absolute;}
 .windmill-5:before{
@@ -524,6 +554,157 @@
   height: .4rem;
   left: 1.8rem;
 }
+/*房子*/
+.house{
+  position: absolute;
+  top: -6.5rem;
+  right: 0;
+  width: 12rem;
+  height: 8rem;
+}
+.house>div{ position: absolute;}
+.house-1{
+  bottom: 0;
+  width: 7rem;
+  height: 3.5rem;
+  background-color: #e75c62;
+}
+.house-2{
+  bottom: 3.5rem;
+  left: 0;
+  border-bottom: 2rem solid #e75c62;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  height: 0;
+  width: 7rem;
+}
+.house-3 {
+  bottom: 5.5rem;
+  left: 1.5rem;
+  width: 0;
+  height: 0;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 1.5rem solid #e75c62;
+}
+.house-2:before,.house-2:after,.house-3:before,.house-3:after,.house-6:before,.house-7:before,.house-7:after,.house-8:before,.house-8:after{
+  position: absolute;
+  content: "";
+}
+.house-2:before,.house-3:before{
+  bottom: -1rem;
+  left: -2.3rem;
+  width: 2.8rem;
+  height: .35rem;
+  background-color: #FFF;
+  -webkit-transform: rotate(126deg);
+  transform: rotate(126deg);
+  border-top: 3px solid #650e10;
+}
+.house-3:before{
+  left: -2.44rem;
+  width: 3rem;
+  bottom: -.6rem;
+  height: .35rem;
+  -webkit-transform: rotate(143deg);
+  transform: rotate(143deg);
+  border-top: 3px solid #650e10;
+}
+.house-2:after,.house-3:after{
+  bottom: -.77rem;
+  right: -2.5rem;
+  width: 2.75rem;
+  height: .35rem;
+  background-color: #FFF;
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+  border-bottom: 3px solid #650e10;
+}
+.house-2:after{
+  right: -2.26rem;
+  bottom: -1.2rem;
+  -webkit-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.house-4{
+  top: 0.25rem;
+  right: 0rem;
+  width: 7.3rem;
+  height: 2rem;
+  background-color: #643c3d;
+  transform: skewX(50deg);
+}
+.house-5{
+  top: 2.25rem;
+  right: -2rem;
+  width: 7.3rem;
+  height: 2.2rem;
+  background-color: #573435;
+  transform: skewX(36deg);
+}
+.house-6{
+  top: 4.11rem;
+  right: 0;
+  width: 5rem;
+  height: 0.35rem;
+  background-color: #fff;
+}
+.house-6:before{
+  top: .3rem;
+  width: 5rem;
+  height: 1.2rem;
+  background-color: rgba(101, 14, 16, 0.82);
+  z-index: 2;
+}
+.house-7{
+  width: 5rem;
+  height: 3.6rem;
+  right: 0;
+  bottom: 0;
+  background: #be2933;
+}
+.house-7:before,.house-7:after{
+  width: .8rem;
+  height: 1.4rem;
+  background-color: #482112;
+  left: 1.3rem;
+  top: .5rem;
+  border: .15rem solid #fff;
+}
+.house-7:after{
+  left: 3.5rem;
+}
+.house-8{
+  width: 4rem;
+  height: 3rem;
+  background: #3d5246;
+  bottom: 0;
+  left: 1rem;
+}
+.house-8:before{
+  top: -.5rem;
+  left: 0;
+  width: 5rem;
+  height: .5rem;
+  background-color: #fff;
+  border-radius: .1rem;
+}
+.house-8:after{
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 2.2rem;
+  background-color: #6a876e;
+}
+.house-9{
+  width: 6rem;
+  height: 1rem;
+  background-color: #6db835;
+  border-radius: 2rem 0 0 0;
+  bottom: 0;
+  right: 0;
+}
+
 /*动画*/
 .infinite{-webkit-animation-iteration-count: infinite;}
 @-webkit-keyframes greenpulse {
