@@ -159,9 +159,17 @@
 .triangle-box {
   position: absolute;
   width: 100%;
-  top: 36%;
+  top: 35%;
   left: 0;
   height: 5%;
+  display: flex;
+  align-items: flex-end;
+
+}
+.triangle-box.two{
+  top: 3.2rem;
+  height: 1rem;
+  z-index: 2;
 }
 .triangle-box .item{
   display: inline-block;
@@ -170,6 +178,7 @@
   border-left: .25rem solid transparent;
   border-right: .25rem solid transparent;
   border-bottom: .5rem solid #60ae34;
+  margin: 0 .5rem;
 }
 .triangle-box .item:nth-child(1){ margin-left: 2rem;}
 .triangle-box .item:nth-child(4){ margin-left: 1rem;}
@@ -555,6 +564,16 @@
   left: 1.8rem;
 }
 /*房子*/
+.house-6:before,
+.house-7:before,
+.house-7:after,
+.house-8:before,
+.house-8:after,
+.bee-box:before,
+.soil:before{
+  position: absolute;
+  content: "";
+}
 .house{
   position: absolute;
   top: -6.5rem;
@@ -578,6 +597,24 @@
   height: 0;
   width: 7rem;
 }
+.house-2-1{
+  bottom: 3.5rem;
+  left: -.7rem;
+  border-bottom: 2rem solid #fff;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  height: 0;
+  width: 8.4rem;
+}
+.house-2-2{
+  bottom: 3.5rem;
+  left: -.3rem;
+  border-bottom: 2rem solid #650e10;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  height: 0;
+  width: 7.6rem;
+}
 .house-3 {
   bottom: 5.5rem;
   left: 1.5rem;
@@ -587,44 +624,23 @@
   border-right: 2rem solid transparent;
   border-bottom: 1.5rem solid #e75c62;
 }
-.house-2:before,.house-2:after,.house-3:before,.house-3:after,.house-6:before,.house-7:before,.house-7:after,.house-8:before,.house-8:after{
-  position: absolute;
-  content: "";
+.house-3-1 {
+  bottom: 5.5rem;
+  left: .76rem;
+  width: 0;
+  height: 0;
+  border-left: 2.8rem solid transparent;
+  border-right: 2.8rem solid transparent;
+  border-bottom: 2.2rem solid #fff;
 }
-.house-2:before,.house-3:before{
-  bottom: -1rem;
-  left: -2.3rem;
-  width: 2.8rem;
-  height: .35rem;
-  background-color: #FFF;
-  -webkit-transform: rotate(126deg);
-  transform: rotate(126deg);
-  border-top: 3px solid #650e10;
-}
-.house-3:before{
-  left: -2.44rem;
-  width: 3rem;
-  bottom: -.6rem;
-  height: .35rem;
-  -webkit-transform: rotate(143deg);
-  transform: rotate(143deg);
-  border-top: 3px solid #650e10;
-}
-.house-2:after,.house-3:after{
-  bottom: -.77rem;
-  right: -2.5rem;
-  width: 2.75rem;
-  height: .35rem;
-  background-color: #FFF;
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
-  border-bottom: 3px solid #650e10;
-}
-.house-2:after{
-  right: -2.26rem;
-  bottom: -1.2rem;
-  -webkit-transform: rotate(54deg);
-  transform: rotate(54deg);
+.house-3-2 {
+  bottom: 5.5rem;
+  left: 1.2rem;
+  width: 0;
+  height: 0;
+  border-left: 2.35rem solid transparent;
+  border-right: 2.35rem solid transparent;
+  border-bottom: 1.9rem solid #650e10;
 }
 .house-4{
   top: 0.25rem;
@@ -632,18 +648,18 @@
   width: 7.3rem;
   height: 2rem;
   background-color: #643c3d;
-  transform: skewX(50deg);
+  transform: skewX(51deg);
 }
 .house-5{
   top: 2.25rem;
-  right: -2rem;
+  right: -2.05rem;
   width: 7.3rem;
   height: 2.2rem;
   background-color: #573435;
   transform: skewX(36deg);
 }
 .house-6{
-  top: 4.11rem;
+  top: 4rem;
   right: 0;
   width: 5rem;
   height: 0.35rem;
@@ -703,6 +719,51 @@
   border-radius: 2rem 0 0 0;
   bottom: 0;
   right: 0;
+}
+/*蜜蜂鲜花*/
+.bee-box{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 7rem;
+  height: 4rem;
+  background-color: #F90;
+}
+.bee-box>div{ position: absolute; }
+.bee-box:before{
+  width: 7rem;
+  height: .6rem;
+  background-color: #47b766;
+  border-radius: .5rem;
+  bottom: -.3rem;
+}
+.soil,.soil:before{
+  width: 2rem;
+  height: 1rem;
+  border-radius: 3rem 3rem 0 0;
+}
+.soil{
+  bottom: 0;
+  left: .8rem;
+  background-color: #7e422b;
+  z-index: 2
+}
+.soil:before{
+  left: -.8rem;
+  background-color: #ab5e2b
+}
+.soil.two,.soil.two:before{
+  width: 1.8rem;
+  height: 1.2rem;
+  border-radius: 3rem 3rem 0 0;
+}
+.soil.two{
+  bottom: 0;
+  left: 3rem;
+}
+.soil.two:before{
+  left: -.5rem;
+  background-color: #ab5e2b;
 }
 
 /*动画*/
