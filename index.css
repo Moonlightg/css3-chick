@@ -4,6 +4,41 @@
  * https://github.com/Moonlightg
  * Copyright (c) 2017.12.06 Moonlight, Inc.
  */
+.egg:before,
+.chick:before,
+.eye span:before,
+.eye span:after,
+.blusher span:before,
+.blusher span:after,
+.house-6:before,
+.house-7:before,
+.house-7:after,
+.house-8:before,
+.house-8:after,
+.bee-box:before,
+.soil:before,
+.soil:after,
+.flowerpot:after,
+.flowerpot-top:before,
+.flowerpot-top:after,
+.flower-top:before,
+.flower-head:after,
+.flower-head:before,
+.bee:before,
+.bee:after,
+.bee-body:before,
+.bee-body:after,
+.fence span:nth-child(1):before,
+.fence span:nth-child(1):after,
+.fence span:nth-child(2):before,
+.fence span:nth-child(2):after,
+.fence span:nth-child(3):before,
+.fence span:nth-child(3):after,
+.fence span:nth-child(4):before,
+.fence span:nth-child(4):after{
+  position: absolute;
+  content: "";
+}
 .container {
   height: 100%;
   overflow-y: hidden;
@@ -58,7 +93,7 @@
   background-image:-webkit-linear-gradient(180deg, #5dac34, #b7f03b); 
   background-image:linear-gradient(180deg, #5dac34, #b7f03b);
 }
-.grass-1>span:nth-child(5),.grass-1 span:nth-child(6){
+.grass-1>span:nth-child(5),.grass-1>span:nth-child(6){
   height: 13%;
 }
 .grass-1>span:nth-child(5){
@@ -77,7 +112,7 @@
   background-image:-webkit-linear-gradient(225deg, #b1e837, #b7f03b); 
   background-image:linear-gradient(225deg, #b1e837, #b7f03b);
 }
-.grass-1>span:nth-child(5)::before,.grass-1 span:nth-child(6)::before,.grass-1 span:nth-child(6)::after{
+.grass-1>span:nth-child(5):before,.grass-1>span:nth-child(6):before,.grass-1>span:nth-child(6):after{
   position: absolute;
   width: 80%;
   left: 1rem;
@@ -85,18 +120,18 @@
   height: .8rem;
   border-radius: 1rem;
 }
-.grass-1>span:nth-child(5)::before{
+.grass-1>span:nth-child(5):before{
   bottom: .5rem;
   background-image:-webkit-linear-gradient(225deg, #bdf641, #b7f03b); 
   background-image:linear-gradient(225deg, #bdf641, #b7f03b);
 }
-.grass-1>span:nth-child(6)::before{
+.grass-1>span:nth-child(6):before{
   top: .25rem;
   height: 1rem;
   background-image:-webkit-linear-gradient(225deg, #c2f64e, #b7f03b); 
   background-image:linear-gradient(225deg, #c2f64e, #b7f03b);
 }
-.grass-1>span:nth-child(6)::after{
+.grass-1>span:nth-child(6):after{
   width: 65%;
   top: .8rem;
   height: 1rem;
@@ -119,15 +154,94 @@
   -webkit-animation-name:greenpulse;
   -webkit-animation-duration: 2s;
 }
-.egg::before{
-  position: absolute;
+.egg:before{
   top: -.1rem;
   left: -.4rem;
-  content: "";
   width: 3rem;
   height: 3rem;
   background-color: #fff;
   border-radius: 50%;
+}
+/*鸡鸡*/
+.chick{
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  display: block;
+  width: 7.6rem;
+  height: 8.6rem;
+  margin-left: -3.5rem;
+  background-color: #f2e3cb;
+  border-radius: 66% 66% 66% 66% / 80% 80% 50% 50%;
+  z-index: 5;
+}
+.chick:before{
+  width: 7.6rem;
+  height: 8.2rem;
+  background-color: #fff;
+  border-radius: 66% 66% 66% 66% / 80% 80% 50% 50%;
+}
+.chick>div{ position: absolute; }
+.eye{
+  top: 1.5rem;
+  left: 1.3rem;
+  width: 5rem;
+  height: 1rem;
+}
+.eye span{
+  position: absolute;
+  left: 1rem;
+  width: .5rem;
+  height: 1rem;
+  background-color: #27221e;
+  border-radius: 50%;
+}
+.eye span:nth-child(2){
+  left: 3.5rem
+}
+.eye span:before{
+  width: .16rem;
+  height: .16rem;
+  border-radius: .16rem;
+  background-color: #fff;
+  top: .3rem;
+  left: .19rem;
+}
+.eye span:after{
+  left: -.2rem;
+  top: -1rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 6;
+  -webkit-animation:eye 1.4s ease-in infinite;
+}
+.blusher{
+  top: 3rem;
+  left: 1.3rem;
+  width: 5rem;
+  height: 1rem;
+}
+.blusher span{
+  position: absolute;
+  left: .6rem;
+  width: .8rem;
+  height: .4rem;
+  background-color: #fe8a78;
+  border-radius: 50%;
+}
+.blusher span:nth-child(2){
+  left: 3.5rem;
+}
+.blusher span:before {
+  top: -.1rem;
+  left: -.2rem;
+  width: 1.2rem;
+  height: .6rem;
+  border-radius: 50%;
+  background-color: rgba(254, 138, 120, 0.5);
+  box-shadow: 0 0 5px #fdccc4;
 }
 /*心形*/
 .heart {
@@ -571,35 +685,6 @@
   left: 1.8rem;
 }
 /*房子*/
-.house-6:before,
-.house-7:before,
-.house-7:after,
-.house-8:before,
-.house-8:after,
-.bee-box:before,
-.soil:before,
-.soil:after,
-.flowerpot:after,
-.flowerpot-top:before,
-.flowerpot-top:after,
-.flower-top:before,
-.flower-head:after,
-.flower-head:before,
-.bee:before,
-.bee:after,
-.bee-body:before,
-.bee-body:after,
-.fence span:nth-child(1):before,
-.fence span:nth-child(1):after,
-.fence span:nth-child(2):before,
-.fence span:nth-child(2):after,
-.fence span:nth-child(3):before,
-.fence span:nth-child(3):after,
-.fence span:nth-child(4):before,
-.fence span:nth-child(4):after{
-  position: absolute;
-  content: "";
-}
 .house{
   position: absolute;
   top: -6.5rem;
@@ -639,7 +724,7 @@
   border-left: 1.5rem solid transparent;
   border-right: 1.5rem solid transparent;
   height: 0;
-  width: 7.6rem;
+  width: 7.676rem;
 }
 .house-3 {
   bottom: 5.5rem;
@@ -1099,4 +1184,11 @@
   75% { transform: rotateY(0deg) translate3d(-50%, -80%, 0);}
   99.9% { transform: rotateY(0deg) translate3d(0, 0, 0);}
   100% { transform: rotateY(180deg) translate3d(0, 0, 0);}
+}
+@-webkit-keyframes eye {
+  0% { transform: translate3d(0, 0, 0);}
+  40% { transform: translate3d(0, 0, 0);}
+  50% { transform: translate3d(0, 60%, 0);}
+  60% { transform: translate3d(0, 0, 0);}
+  100% { transform: translate3d(0, 0, 0);}
 }
