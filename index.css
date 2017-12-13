@@ -54,6 +54,7 @@
   bottom: 0;
   background-image:-webkit-linear-gradient(to bottom, #75cefc, #fff); 
   background-image:linear-gradient(to bottom,#75cefc,#fff);
+  overflow: hidden;
 }
 .grass-1{
   position: absolute;
