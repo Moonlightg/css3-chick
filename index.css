@@ -974,6 +974,7 @@
   right: 0;
   width: 12rem;
   height: 8rem;
+  overflow: hidden;
 }
 .house>div{ position: absolute;}
 .house-1{
