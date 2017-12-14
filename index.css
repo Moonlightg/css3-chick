@@ -589,7 +589,7 @@
 .food .dot-box span{
   position: absolute;
   top: 70%;
-  left: 0;
+  left: 20%;
   width: .16rem;
   height: .16rem;
   border-radius: 50%;
@@ -839,7 +839,8 @@
   align-items: flex-end;
 }
 .triangle-box.two{
-  top: 4.2rem;
+  top: 3.2rem;
+  width: 90%;
   height: 1rem;
   z-index: 5;
 }
@@ -852,7 +853,7 @@
   border-bottom: .5rem solid #60ae34;
   margin: 0 .5rem;
 }
-.triangle-box .item:nth-child(1){ margin-left: 2rem;}
+.triangle-box .item:nth-child(1),
 .triangle-box .item:nth-child(4){ margin-left: 1rem;}
 /*叶子*/
 .leaf-box{
@@ -1460,9 +1461,10 @@
 .bee-box{
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 0;
   width: 7rem;
-  height: 4rem
+  height: 4rem;
+  transform: scale(.8,.8)
 }
 .bee-box>div{ position: absolute; }
 .bee-box:before{
@@ -1828,11 +1830,11 @@
   100% { opacity: 1;}
 }
 @-webkit-keyframes dot-1{
-  0% { transform: translate3d(0, 0, 0);}
-  25% { transform: translate3d(50%, -70%, 0);}
-  50% { transform: translate3d(100%, -140%, 0);}
-  75% { transform: translate3d(100%, -210%, 0);}
-  100% { transform: translate3d(100%, -280%, 0);}
+  0% { transform: translate3d(50%, -70%, 0);}
+  25% { transform: translate3d(50%, -170%, 0);}
+  50% { transform: translate3d(100%, -270%, 0);}
+  75% { transform: translate3d(100%, -370%, 0);}
+  100% { transform: translate3d(100%, -470%, 0);}
 }
 @-webkit-keyframes face{
   0% { transform: scale(1,1) translate3d(5%, 10%, 0);}
