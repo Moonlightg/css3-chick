@@ -4,6 +4,7 @@
  * https://github.com/Moonlightg
  * Copyright (c) 2017.12.06 Moonlight, Inc.
  */
+.egg-wrapper span:before,
 .egg:before,
 .chick-head:before,
 .chick-head:after,
@@ -14,6 +15,8 @@
 .blusher span:after,
 .foot:before,
 .foot span:before,
+.face:before,
+.face:after,
 .wing-left:before,
 .house-6:before,
 .house-7:before,
@@ -150,17 +153,81 @@
   background-image:linear-gradient(225deg, #c2f64e, #b7f03b);
 }
 /*鸡蛋*/
+.egg-wrapper{
+  position: absolute;
+  bottom: 43%;
+  left: 10%;
+  width: 5rem;
+  height: 5rem;
+  z-index: 6;
+}
+.egg-wrapper span{ position: absolute; }
+.egg-wrapper span:nth-child(1),
+.egg-wrapper span:nth-child(1):before{
+  left: 5%;
+  bottom: 0;
+  width: 90%;
+  height: .6rem;
+  background-color: #9fd444;
+  border-radius: 1rem 1rem 0 0;
+}
+.egg-wrapper span:nth-child(1):before{
+  left: 12.5%;
+  width: 75%;
+  bottom: .5rem;
+}
+.egg-wrapper span:nth-child(2),
+.egg-wrapper span:nth-child(2):before{
+  left: 10%;
+  bottom: 0;
+  width: 80%;
+  height: .6rem;
+  background-color: #77b723;
+  border-radius: 1rem 1rem 0 0;
+}
+.egg-wrapper span:nth-child(2):before{
+  left: 13%;
+  width: 74%;
+  bottom: .5rem;
+}
+.egg-wrapper span:nth-child(3),
+.egg-wrapper span:nth-child(3):before{
+  left: 20%;
+  bottom: 0;
+  width: 60%;
+  height: .8rem;
+  background-color: #bfe85c;
+  border-radius: 1rem 1rem 0 0;
+  z-index: 7
+}
+.egg-wrapper span:nth-child(3):before{
+  bottom: .3rem;
+}
+.egg-wrapper span:nth-child(4),
+.egg-wrapper span:nth-child(4):before{
+  left: 22.5%;
+  bottom: 0;
+  width: 55%;
+  height: .6rem;
+  background-color: #a0d231;
+  border-radius: 1rem 1rem 0 0;
+  z-index: 7
+}
+.egg-wrapper span:nth-child(4):before{
+  bottom: .3rem;
+}
 .egg{
   position: absolute;
-  bottom: 45%;
-  left: 15%;
-  display: block;
-  width: 3rem;
-  height: 3.6rem;
+  bottom: 0;
+  left: 50%;
+  width: 2.5rem;
+  height: 3rem;
+  margin-left: -1.25rem;
   background-color: #f2e3cb;
   border: 2px solid #fff;
   border-radius: 60% 60% 55% 55% / 80% 80% 40% 40%;
   z-index: 6;
+  display: block;
   overflow: hidden;
   -webkit-animation-name:greenpulse;
   -webkit-animation-duration: 2s;
@@ -168,11 +235,12 @@
 .egg:before{
   top: -.1rem;
   left: -.4rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.6rem;
   background-color: #fff;
   border-radius: 50%;
 }
+
 /*鸡鸡*/
 .chick{
   position: absolute;
@@ -296,6 +364,31 @@
   border-radius: 50%;
   background-color: rgba(254, 138, 120, 0.5);
   box-shadow: 0 0 5px #fdccc4;
+}
+.face{
+  top: 3.1rem;
+  left: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  z-index: 7;
+  -webkit-animation:face 1.5s ease-in infinite;
+}
+.face:before{
+  top: 50%;
+  left: .3rem;
+  margin-top: -.7rem;
+  width: 1.6rem;
+  height: 1.4rem;
+  border-radius: 80%;
+  background-color: #fcf4f2;
+}
+.face:after{
+  top: 0;
+  left: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: #fff;
 }
 .wing-left{
   left: -.34rem;
@@ -644,8 +737,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1rem;
-  height: 1rem;
+  width: .8rem;
+  height: .8rem;
   margin-left: -20%;
   margin-top: -30%;
 }
@@ -653,10 +746,10 @@
 .heart:after {
   position: absolute;
   content: "";
-  left: .5rem;
+  left: .36rem;
   top: 0;
-  width: .5rem;
-  height: .9rem;
+  width: .4rem;
+  height: .7rem;
   background: red;
   border-radius: .5rem .5rem 0 0;
   -webkit-transform: rotate(-45deg);
@@ -675,12 +768,11 @@
 .triangle-box {
   position: absolute;
   width: 100%;
-  top: 35%;
+  top: 35.5%;
   left: 0;
   height: 5%;
   display: flex;
   align-items: flex-end;
-
 }
 .triangle-box.two{
   top: 4.2rem;
@@ -1507,7 +1599,7 @@
 .bee>div{ position: absolute; }
 .bee:before,.bee:after{
   top: 50%;
-  right: .1rem;
+  right: .45rem;
   width: .1rem;
   height: .1rem;
   border-radius: .1rem;
@@ -1515,22 +1607,22 @@
   margin-top: -.05rem;
 }
 .bee:before{
-  right: .4rem;
+  right: .7rem;
   z-index: 5;
 }
 .bee-body,.bee-body:before,.bee-body:after{
   left: 0;
-  width: .8rem;
-  height: .8rem;
-  border-radius: .8rem;
+  width: .6rem;
+  height: .6rem;
+  border-radius: .6rem;
   background-color: #442418;
 }
 .bee-body:before{
-  left: .3rem;
+  left: .2rem;
   background-color: #feca21;
 }
 .bee-body:after{
-  left: .7rem;
+  left: .5rem;
   background-color: #442418;
 }
 /*动画*/
@@ -1670,4 +1762,11 @@
   50% { opacity: 1;}
   75% {opacity: 0;}
   100% { opacity: 1;}
+}
+@-webkit-keyframes face{
+  0% { transform: scale(1,1) translate3d(5%, 10%, 0);}
+  25% { transform: scale(1.1,1.1) translate3d(10%, 12%, 0);}
+  50% { transform: scale(1,1) translate3d(5%, 10%, 0);}
+  75% { transform: scale(1.1,1.1) translate3d(10%, 12%, 0);}
+  100% { transform: scale(1,1) translate3d(5%, 10%, 0);}
 }
