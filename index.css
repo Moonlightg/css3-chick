@@ -83,7 +83,7 @@
   z-index: 20;
 }
 .sunlight span:nth-child(1){
-  -webkit-animation:sunlight-1 12s ease-in infinite;
+  -webkit-animation:sunlight-1 11s ease-in infinite;
 }
 .sunlight span:nth-child(2){
   left: 28%;
@@ -93,13 +93,13 @@
   left: 65%;
   width: 5rem;
   transform: rotate(-18deg);
-  -webkit-animation:sunlight-3 12s ease-in infinite;
+  -webkit-animation:sunlight-3 13s ease-in infinite;
 }
 .sunlight span:nth-child(4){
   left: 108%;
   width: 1.6rem;
   transform: rotate(-22deg);
-  -webkit-animation:sunlight-3 12s ease-in infinite;
+  -webkit-animation:sunlight-3 15s ease-in infinite;
 }
 .grass-1{
   position: absolute;
@@ -287,6 +287,7 @@
   height: 8.6rem;
   margin-left: -3.5rem;
   z-index: 5;
+/*  transform: scale(.5,.5);*/
 }
 .chick-head{
   top: -1rem;
@@ -578,6 +579,33 @@
   border-radius: .4rem;
   -webkit-animation:food-p 1.5s ease-in infinite;
 }
+.food .dot-box {
+  position: absolute;
+  top: -.4rem;
+  left: .4rem;
+  width: .8rem;
+  height: .8rem;
+}
+.food .dot-box span{
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: .16rem;
+  height: .16rem;
+  border-radius: 50%;
+  background-color: #ffcf00;
+  -webkit-animation:dot-1 1s ease infinite;
+}
+.food .dot-box span:nth-child(2){
+  position: absolute;
+  top: 60%;
+  left: .4rem;
+  width: .1rem;
+  height: .1rem;
+  border-radius: 50%;
+  background-color: #ffcf00;
+  -webkit-animation:dot-1 1.4s ease infinite;
+}
 .mouth{
   top: 3.2rem;
   left: 3.45rem;
@@ -660,7 +688,7 @@
   transform: rotate(-15deg);
 }
 .foot span:nth-child(2):before{
-  left: .14rem;
+  left: .1rem;
   transform: rotate(15deg);
 }
 /*鸡饭碗*/
@@ -1525,8 +1553,8 @@
 .flowerpot-top:after{
   width: .35rem;
   height: 2.5rem;
-  left: 1rem;
-  bottom: -1.3rem;
+  left: 1.14rem;
+  bottom: -1.2rem;
   border-radius: .1rem;
   background-color: #fff;
   -webkit-transform: rotate(91deg);
@@ -1798,6 +1826,13 @@
   50% { opacity: 1;}
   75% {opacity: 0;}
   100% { opacity: 1;}
+}
+@-webkit-keyframes dot-1{
+  0% { transform: translate3d(0, 0, 0);}
+  25% { transform: translate3d(50%, -70%, 0);}
+  50% { transform: translate3d(100%, -140%, 0);}
+  75% { transform: translate3d(100%, -210%, 0);}
+  100% { transform: translate3d(100%, -280%, 0);}
 }
 @-webkit-keyframes face{
   0% { transform: scale(1,1) translate3d(5%, 10%, 0);}
