@@ -85,6 +85,9 @@
   left: 0;
   -webkit-animation:pic 1.5s ease-in infinite;
 }
+.loading .egg{
+  -webkit-animation:none;
+}
 /*容器*/
 .container {
   height: 100%;
