@@ -52,6 +52,40 @@
   position: absolute;
   content: "";
 }
+/*加载*/
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #b7eaff;
+  z-index: 99;
+}
+.loading .pic{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: -2.5rem 0 0 -2.5rem;
+  
+}
+.loading .pic p{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: .6rem;
+  color: #4d96b5;
+}
+.loading .egg-wrapper{
+  bottom: 20%;
+  left: 0;
+  -webkit-animation:pic 1.5s ease-in infinite;
+}
+/*容器*/
 .container {
   height: 100%;
   overflow: hidden;
@@ -803,14 +837,14 @@
   left: 50%;
   width: .8rem;
   height: .8rem;
-  margin-left: -20%;
+  margin-left: -16%;
   margin-top: -30%;
 }
 .heart:before,
 .heart:after {
   position: absolute;
   content: "";
-  left: .36rem;
+  left: .35rem;
   top: 0;
   width: .4rem;
   height: .7rem;
@@ -1857,4 +1891,11 @@
   0% { opacity: 0;}
   50% { opacity: .08;}
   100% { opacity: 0;}
+}
+@-webkit-keyframes pic{
+  0% { transform: scale(.8,.8)}
+  25% {transform: scale(1,1)}
+  50% { transform: scale(.8,.8)}
+  75% {transform: scale(1,1)}
+  100% { transform: scale(.8,.8)}
 }
